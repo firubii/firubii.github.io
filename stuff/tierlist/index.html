@@ -25,7 +25,7 @@
 			<button id="game">Change game</button>
 			<button id="help">Help</button>
 			<button id="reset">Reset</button>
-			<a href="../">Back</a>
+			<button id="back">Back</button>
 		</div>
 	</div>
 	
@@ -202,6 +202,10 @@
 			$("#overlay").css("opacity", 1);
 			$("#overlay").css("visibility", "visible");
 			$("#helpMenu").css("top",alignPopup($("#helpMenu")));
+		});
+		
+		$(document).on("click", "#back", function() { // go back
+			window.location.href = "../";
 		});
 		
 		$(document).on("click", "#colorselect span", function() { // change row label
