@@ -1,2 +1,1 @@
-# firubii.github.io
-Just a small website for myself
+There isn't much here, just a small website for myself
