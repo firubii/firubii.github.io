@@ -88,6 +88,12 @@
 				<h1>CHANGE GAME</h1>
 				<span id="close"></span>
 				<div id="switchButtons">
+					<button id="switchTh75">Touhou 7.5 - Immaterial and Missing Power</button>
+					<button id="switchTh105">Touhou 10.5 - Scarlet Weather Rhapsody</button>
+					<button id="switchTh123">Touhou 12.3 - Hisoutensoku/Unthinkable Natural Law</button>
+					<button id="switchTh135">Touhou 13.5 - Hopeless Masquerade</button>
+					<button id="switchTh145">Touhou 14.5 - Urban Legend in Limbo</button>
+					<button id="switchTh155">Touhou 15.5 - Antinomy of Common Flowers</button>
 					<button id="switchPuyon">Puyo Puyo~n</button>
 					<button id="switchPuyoFever">Puyo Puyo Fever</button>
 					<button id="switchPuyoFever2">Puyo Puyo Fever 2</button>
@@ -144,6 +150,12 @@
 		var gamePuyoTet = ["puyo","amitie","ringo","rulue","suketoudara","zed","draco","ess","lemres","satan","ai","arlecarbuncle","maguro","sig","ecolo","ex","o","raffina","risukuma","witch","feli","jayelle","klug","schezo","tee"];
 		var gamePuyoChron = ["puyo","amitie","ringo","rulue","suketoudara","ally","draco","lemres","lidelle","satan","accord","arle","maguro","sig","carbuncle","ecolo","oceanprince","raffina","risukuma","witch","feli","klug","rafisol","schezo","yurei","seriri","donguri","harpy","onionpixie","lagnus"];
 		var gamePuyoChamp = ["puyo","amitie","hed","ringo","rulue","suketoudara","ally","draco","harpy","hartman","penglai","satan","arle","ciel","maguro","sig","seriri","alex","carbuncle","raffina","risukuma","witch","lagnus","schezo","sultana"];
+		var gameTh75 = ["th7.5","alice","marisa","meiling","patchouli","reimu","remilia","sakuya","suika","youmu","yukari","yuyuko"];
+		var gameTh105 = ["th10.5","alice","aya","iku","komachi","marisa","patchouli","reimu","reisen","remilia","sakuya","suika","tenshi","youmu","yukari","yuyuko"];
+		var gameTh123 = ["th12.3","alice","aya","cirno","iku","komachi","marisa","meiling","patchouli","reimu","reisen","remilia","sakuya","sanae","suika","suwako","tenshi","utsuho","youmu","yukari","yuyuko"];
+		var gameTh135 = ["th13.5","byakuren","futo","ichirin","koishi","kokoro","mamizou","marisa","miko","nitori","reimu"];
+		var gameTh145 = ["th14.5","byakuren","futo","ichirin","kasen","koishi","kokoro","mamizou","marisa","miko","mokou","nitori","reimu","reisen","shinmyoumaru","sumireko"];
+		var gameTh155 = ["th15.5","byakuren","doremy","futo","ichirin","joon","kasen","koishi","kokoro","mamizou","marisa","miko","mokou","nitori","reimu","reisen","shinmyoumaru","sumireko","tenshi","yukari"];
 		
 		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div class='hiddenkid'></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
 		
@@ -220,6 +232,12 @@
 		$(document).on("click", "#gameChange button", function() { // change game
 			console.log("game switching");
 			switch($(this).attr("id")) {
+				case "switchTh75": changeGame(gameTh75);break;
+				case "switchTh105": changeGame(gameTh105);break;
+				case "switchTh123": changeGame(gameTh123);break;
+				case "switchTh135": changeGame(gameTh135);break;
+				case "switchTh145": changeGame(gameTh145);break;
+				case "switchTh155": changeGame(gameTh155);break;
 				case "switchPuyon": changeGame(gamePuyon);break;
 				case "switchPuyoFever": changeGame(gamePuyoFever);break;
 				case "switchPuyoFever2": changeGame(gamePuyoFever2);break;
@@ -392,6 +410,12 @@
 			});
 			console.log(processedCode);
 			switch(processedCode[0][0]) {
+				case "th7.5": changeGame(gameTh75);break;
+				case "th10.5": changeGame(gameTh105);break;
+				case "th12.3": changeGame(gameTh123);break;
+				case "th13.5": changeGame(gameTh135);break;
+				case "th14.5": changeGame(gameTh145);break;
+				case "th15.5": changeGame(gameTh155);break;
 				case "puyon": changeGame(gamePuyon);break;
 				case "puyoF": changeGame(gamePuyoFever);break;
 				case "puyoF2": changeGame(gamePuyoFever2);break;
