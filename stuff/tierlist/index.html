@@ -104,6 +104,8 @@
 					<button id="switchPuyoTet">Puyo Puyo Tetris</button>
 					<button id="switchPuyoChron">Puyo Puyo Chronicles</button>
 					<button id="switchPuyoChamp">Puyo Puyo Champions/Puyo Puyo eSports</button>
+					<button id="switchKF2">Kirby Fighters 2</button>
+					<button id="switchKF2i">Kirby Fighters 2 (Icons)</button>
 				</div>
 				<p><strong>Changing your game will empty your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
 			</div>
@@ -157,6 +159,8 @@
 		var gameTh135 = ["th13.5","byakuren","futo","ichirin","koishi","kokoro","mamizou","marisa","miko","nitori","reimu"];
 		var gameTh145 = ["th14.5","byakuren","futo","ichirin","kasen","koishi","kokoro","mamizou","marisa","miko","mokou","nitori","reimu","reisen","shinmyoumaru","sumireko"];
 		var gameTh155 = ["th15.5","byakuren","doremy","futo","ichirin","joon","kasen","koishi","kokoro","mamizou","marisa","miko","mokou","nitori","reimu","reisen","shinmyoumaru","sumireko","tenshi","yukari"];
+		var gameKF2 = ["kf2","sword","bomb","staff","artist","fighter","yoyo","beetle","bell","archer","parasol","cutter","hammer","beam","wrestler","ninja","whip","water","bandee","gooey","magolor","meta","dedede"];
+		var gameKF2i = ["kf2i","sword","bomb","staff","artist","fighter","yoyo","beetle","bell","archer","parasol","cutter","hammer","beam","wrestler","ninja","whip","water","bandee","gooey","magolor","meta","dedede"];
 		
 		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div class='hiddenkid'></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
 		
@@ -249,6 +253,8 @@
 				case "switchPuyoTet": changeGame(gamePuyoTet);break;
 				case "switchPuyoChron": changeGame(gamePuyoChron);break;
 				case "switchPuyoChamp": changeGame(gamePuyoChamp);break;
+				case "switchKF2": changeGame(gameKF2);break;
+				case "switchKF2i": changeGame(gameKF2i);break;
 			}
 		});
 			
