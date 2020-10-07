@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>firubii's place - 35 marios</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'PT Sans', sans-serif;
+				margin: 0px;
+			}
+			h1 {
+				font-weight: bold;
+				font-size: 50px;
+			}
+			.header
+			{
+				width: flex;
+				height: 65px;
+				background: -webkit-linear-gradient(top, rgba(0,255,255,1) 1%,rgba(122,0,255,1) 100%);
+			}
+			.main {
+				width: 774px;
+				margin: 200px auto;
+				margin-top: 10px;
+			}
+			table {
+			  border-collapse: collapse;
+			  width: 50%;
+			}
+			td, th {
+			  border: 1px solid #999999;
+			  text-align: center;
+			  padding: 8px;
+			}
+			th {
+			  background-color: #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header"></div>
+		<div class="main">
+			<div>
+				<h1>Super Mario Bros. 35 Research</h1>
+				<div>
+					<b style="font-size:25px;">Level Data</b>
+					<p>The "_stage.xml_" file for each stage lists various properties of the stages, and next to it in the archive is XML files for each area and their corresponding .dat file. The tilemap is just raw tilemap data, where each tile takes up 2 bytes of data. The first byte is the tile's internal ID, and the second is flags for it to use.</p>
+					<b style="font-size:25px;">Tile List</b>
+					<table>
+						<tr><th>Tile ID</th><th>Description</th></tr>
+						<tr><td>0x00</td><td>Air</td></tr>
+						<tr><td>0x01</td><td>Ground</td></tr>
+						<tr><td>0x02</td><td>Coin Frame 1</td></tr>
+						<tr><td>0x03</td><td>Coin Frame 2</td></tr>
+						<tr><td>0x04</td><td>Coin Frame 3</td></tr>
+						<tr><td>0x05</td><td>? Block Frame 1</td></tr>
+						<tr><td>0x06</td><td>? Block Frame 2</td></tr>
+						<tr><td>0x07</td><td>? Block Frame 3</td></tr>
+						<tr><td>0x08</td><td>Used Block</td></tr>
+						<tr><td>0x09</td><td>Block</td></tr>
+						<tr><td>0x0A</td><td>Vertical Pipe Exit Left</td></tr>
+						<tr><td>0x0B</td><td>Vertical Pipe Exit Right</td></tr>
+						<tr><td>0x0C</td><td>Vertical Pipe Base Left</td></tr>
+						<tr><td>0x0D</td><td>Vertical Pipe Base Right</td></tr>
+						<tr><td>0x0E</td><td>Horizontal Pipe Exit Top</td></tr>
+						<tr><td>0x0F</td><td>Horizontal Pipe Middle Top</td></tr>
+						<tr><td>0x10</td><td>Horizontal Pipe Base Top</td></tr>
+						<tr><td>0x11</td><td>Horizontal Pipe Exit Bottom</td></tr>
+						<tr><td>0x12</td><td>Horizontal Pipe Middle Bottom</td></tr>
+						<tr><td>0x13</td><td>Horizontal Pipe Base Bottom</td></tr>
+						<tr><td>0x14</td><td>Brick Block</td></tr>
+						<tr><td>0x15</td><td>Castle Top</td></tr>
+						<tr><td>0x16</td><td>Castle Window Left</td></tr>
+						<tr><td>0x17</td><td>Castle Bricks</td></tr>
+						<tr><td>0x18</td><td>Castle Window Right</td></tr>
+						<tr><td>0x19</td><td>Castle Midlevel</td></tr>
+						<tr><td>0x1A</td><td>Castle Door Top</td></tr>
+						<tr><td>0x1B</td><td>Castle Door Bottom</td></tr>
+						<tr><td>0x1C</td><td>Castle Top (Transparent)</td></tr>
+						<tr><td>0x1D</td><td>Nothing</td></tr>
+						<tr><td>0x1E</td><td>Flagpole Top</td></tr>
+						<tr><td>0x1F</td><td>Flagpole</td></tr>
+						<tr><td>0x20</td><td>Tree</td></tr>
+						<tr><td>0x21</td><td>Tree Platform Top Left</td></tr>
+						<tr><td>0x22</td><td>Tree Platform Top Middle</td></tr>
+						<tr><td>0x23</td><td>Tree Platform Top Right</td></tr>
+						<tr><td>0x24</td><td>Bush Left</td></tr>
+						<tr><td>0x25</td><td>Bush Middle</td></tr>
+						<tr><td>0x26</td><td>Bush Right</td></tr>
+						<tr><td>0x27</td><td>Hill Top</td></tr>
+						<tr><td>0x28</td><td>Hill Edge</td></tr>
+						<tr><td>0x29</td><td>Hill Dotted Left</td></tr>
+						<tr><td>0x2A</td><td>Hill Middle</td></tr>
+						<tr><td>0x2B</td><td>Hill Dotted Right</td></tr>
+						<tr><td>0x2C</td><td>Cloud Top Left</td></tr>
+						<tr><td>0x2D</td><td>Cloud Top Middle</td></tr>
+						<tr><td>0x2E</td><td>Cloud Top Right</td></tr>
+						<tr><td>0x2F</td><td>Cloud Bottom Left</td></tr>
+						<tr><td>0x30</td><td>Cloud Bottom Middle</td></tr>
+						<tr><td>0x31</td><td>Cloud Bottom Right</td></tr>
+						<tr><td>0x32</td><td>Tree Small Top</td></tr>
+						<tr><td>0x33</td><td>Tree Tall Top</td></tr>
+						<tr><td>0x34</td><td>Tree Tall Bottom</td></tr>
+						<tr><td>0x35</td><td>Tree Trunk</td></tr>
+						<tr><td>0x36</td><td>Fence</td></tr>
+						<tr><td>0x37</td><td>Cloud</td></tr>
+						<tr><td>0x38</td><td>Water</td></tr>
+						<tr><td>0x39</td><td>Water Top</td></tr>
+						<tr><td>0x3A</td><td>Coral</td></tr>
+						<tr><td>0x3B</td><td>Bridge</td></tr>
+						<tr><td>0x3C</td><td>Mushroom Root</td></tr>
+						<tr><td>0x3D</td><td>Mushroom Root Top</td></tr>
+						<tr><td>0x3E</td><td>Mushroom Platform Left</td></tr>
+						<tr><td>0x3F</td><td>Mushroom Platform Middle</td></tr>
+						<tr><td>0x40</td><td>Mushroom Platform Right</td></tr>
+						<tr><td>0x41</td><td>Bill Blaster Cannon</td></tr>
+						<tr><td>0x42</td><td>Bill Blaster Middle</td></tr>
+						<tr><td>0x43</td><td>Bill Blaster Bottom</td></tr>
+						<tr><td>0x44</td><td>Suspension Line Corner</td></tr>
+						<tr><td>0x45</td><td>Suspension Line</td></tr>
+						<tr><td>0x46</td><td>Castle Brick</td></tr>
+						<tr><td>0x47</td><td>Castle Bridge</td></tr>
+						<tr><td>0x48</td><td>Axe Frame 1</td></tr>
+						<tr><td>0x49</td><td>Axe Frame 2</td></tr>
+						<tr><td>0x4A</td><td>Axe Frame 3</td></tr>
+						<tr><td>0x4B</td><td>Chain</td></tr>
+						<tr><td>0x4C</td><td>Used Block (Castle Palette)</td></tr>
+						<tr><td>0x4D</td><td>Bridge Railing</td></tr>
+						<tr><td>0x4E</td><td>Used Block</td></tr>
+						<tr><td>0x4F</td><td>Nothing</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">Tile Flags</b>
+					<table>
+						<tr><th>Flag</th><th>Description</th></tr>
+						<tr><td>0x01</td><td>Flip Sprite</td></tr>
+						<tr><td>0x02</td><td>Unknown</td></tr>
+						<tr><td>0x04</td><td>Unknown</td></tr>
+						<tr><td>0x08</td><td>Unknown</td></tr>
+						<tr><td>0x10</td><td>Something to do with hidden blocks?</td></tr>
+						<tr><td>0x20</td><td>Something to do with powerups</td></tr>
+						<tr><td>0x40</td><td>Something to do with item variations</td></tr>
+						<tr><td>0x80</td><td>Something to do with coins</td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>firubii's place - kirby</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'PT Sans', sans-serif;
+				margin: 0px;
+			}
+			h1 {
+				font-weight: bold;
+				font-size: 50px;
+			}
+			.header
+			{
+				width: flex;
+				height: 65px;
+				background: -webkit-linear-gradient(top, rgba(0,255,255,1) 1%,rgba(122,0,255,1) 100%);
+			}
+			.main {
+				width: 774px;
+				margin: 200px auto;
+				margin-top: 10px;
+			}
+			table {
+			  border-collapse: collapse;
+			  width: 70%;
+			}
+			td, th {
+			  border: 1px solid #999999;
+			  text-align: center;
+			  padding: 8px;
+			}
+			th {
+			  background-color: #dddddd;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header"></div>
+		<div class="main">
+			<div>
+				<h1>Kirby/HEL Engine Research</h1>
+				<div>
+					<p><b>Note:</b> WIP documentation, will finish this out later with the other file formats</p>
+					<p><b>Not Listed:</b></p>
+						<li>CND</li>
+						<li>CSV Param (Fighters 2)</li>
+						<li>Map3D</li>
+						<li>Map2D</li>
+						<li>Param (RtDL)</li>
+					</p>
+					<b style="font-size:35px;">XBIN Wrapper</b>
+					<p>Almost every non-asset file in HAL's HEL Engine has an "XBIN" header/wrapper in the file. Its purpose is unknown, but it's used in all of them.</p>
+					<b style="font-size:25px;">XBIN Header</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>char[4]</td><td>Magic, always "XBIN"</td></tr>
+						<tr><td>0x4</td><td>byte[2]</td><td>XBIN version, formatted as [0].[1]</td></tr>
+						<tr><td>0x6</td><td>uint16</td><td>Byte order mark (BOM)<br>0x1234 for Big Endian<br>0x3412 for Little Endian</td></tr>
+						<tr><td>0x8</td><td>uint32</td><td>Offset to end of file data</td></tr>
+						<tr><td>0xC</td><td>uint32</td><td>Unknown, always 65001</td></tr>
+						<tr style="background-color:#bbffbb;"><td>0x10</td><td>uint32</td><td>[Version 4.0 only]<br>Offset to XBIN RLOC footer</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">XBIN Footer</b>
+					<p>Only present in XBIN version 4.0.</p>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>char[4]</td><td>Always "RLOC"</td></tr>
+						<tr><td>0x4</td><td>byte[8]</td><td>Padding, always zeros</td></tr>
+					</table>
+					</p>
+					<b style="font-size:35px;">FDGH</b>
+					<p>FDGH files are used to denote game scenes and what files need to be preloaded into memory for each scene. These range from level rooms to main menus.</p>
+					<b style="font-size:25px;">FDGH Header</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>char[4]</td><td>Magic/BOM<br>"FDGH" if Big Endian<br>"HGDF" if Little Endian</td></tr>
+						<tr><td>0x4</td><td>char[4]</td><td>FDGH version, formatted as [0].[1].[2].[3]</td></tr>
+						<tr><td>0x8</td><td>uint32</td><td>Offset to file list</td></tr>
+						<tr><td>0xC</td><td>uint32</td><td>Offset to scene list</td></tr>
+						<tr><td>0x10</td><td>uint32</td><td>Offset to string list</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">File List</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>File count</td></tr>
+						<tr><td>0x4</td><td>uint32[n]</td><td>List of string indexes</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">Scene List</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>Scene count</td></tr>
+						<tr><td>0x4</td><td>uint32[3][n]</td><td>List of offsets to each scene's name, 1st asset group, and 2nd asset group</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">Asset Group Structure</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>Asset count</td></tr>
+						<tr><td>0x4</td><td>uint32[n]</td><td>List of string indexes</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">String List</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>String count</td></tr>
+						<tr><td>0x4</td><td>uint32[n]</td><td>List of offsets to each string</td></tr>
+					</table>
+					</p>
+					<b style="font-size:35px;">MINT Archive</b>
+					<p style="font-size:25px;">Please see <b><a href="https://docs.google.com/spreadsheets/d/1IrP3CzQjVB6G0CvMhafsXdosaCSYivbSrIsuvZIhVgo/edit?usp=sharing">this Google Spreadsheet</a></b> for info on MINT archives and scripts.</p>
+					<b style="font-size:35px;">YAML</b>
+					<p>YAML files are a byte version of the text format Yaml, and are fairly simple.</p>
+					<b style="font-size:25px;">YAML Header</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>char[4]</td><td>Magic, always "YAML"</td></tr>
+						<tr><td>0x4</td><td>char[4]</td><td>YAML version, formatted as [0].[1].[2].[3]</td></tr>
+						<tr><td>0x8</td><td>uint32</td><td>Inital data structure type</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">YAML Data Types</b>
+					<table>
+						<tr><th>Identifier</th><th>Type</th>
+						<tr><td>1</td><td>32-bit Integer</td></tr>
+						<tr><td>2</td><td>Float</td></tr>
+						<tr><td>3</td><td>Boolean</td></tr>
+						<tr><td>4</td><td>String</td></tr>
+						<tr><td>5</td><td>Hash</td></tr>
+						<tr><td>6</td><td>List</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">Int, Bool, and Float Structures</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>Data type identifier<br>See above chart</td></tr>
+						<tr><td>0x4</td><td>--</td><td>Value<br>Type corresponds to the given data type at 0x0</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">String Structure</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>Data type identifier, always 4</td></tr>
+						<tr><td>0x4</td><td>uint32</td><td>Offset to string</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">Hash Structure</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>Data type identifier, always 5</td></tr>
+						<tr><td>0x4</td><td>uint32</td><td>Children count</td></tr>
+						<tr><td>0x8</td><td>uint32[2][n]</td><td>List of offsets to each string name and data</td></tr>
+					</table>
+					</p>
+					<b style="font-size:25px;">List Structure</b>
+					<table>
+						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
+						<tr><td>0x0</td><td>uint32</td><td>Data type identifier, always 6</td></tr>
+						<tr><td>0x4</td><td>uint32</td><td>Children count</td></tr>
+						<tr><td>0x8</td><td>uint32[n]</td><td>List of offsets to each child data structure</td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
