@@ -7,50 +7,176 @@
 			body {
 				font-family: 'PT Sans', sans-serif;
 				margin: 0px;
+				background: url("img/galaxy.jpg") no-repeat;
+				background-position: center;
+				background-attachment: fixed;
 			}
 			h1 {
 				font-weight: bold;
 				font-size: 50px;
-			}
-			.header
-			{
-				width: flex;
-				height: 65px;
-				background: -webkit-linear-gradient(top, rgba(0,255,255,1) 1%,rgba(191,0,255,1) 100%);
+				margin-top: 0px;
 			}
 			.main {
 				width: 774px;
 				margin: 100px auto;
-				margin-top: 10px;
+				margin-top: 100px;
+				border: 6px solid #6c428c;
+				border-radius: 20px;
+				background: linear-gradient(0deg, rgba(166,160,254,0.8) 0%, rgba(227,173,255,0.8) 100%);
+				background-color: #ffffffaa;
+			}
+			.innermain {
+				padding: 15px;
+			}
+			
+			.linkbox {
+				border: 2px solid #7842ff;
+				border-radius: 20px;
+				color: #420bcd;
+				font-size: 25px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #b400ff33;
+				float: left;
+				width: 29.55em;
+				height: inherit;
+				margin-bottom: 5px;
+			}
+			.linkbox:hover {
+				background-color: #e6adff33;
+				border-color: #4300ff;
+			}
+			
+			.twtlink {
+				border: 2px solid #1da1f2;
+				border-radius: 20px;
+				color: #ffffff;
+				font-size: 25px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #1da1f2;
+				float: left;
+				width: 14.6em;
+				height: inherit;
+				margin-bottom: 5px;
+			}
+			.twtlink:hover {
+				color: #ffffff;
+				background-color: #7cc5ef;
+			}
+			.twticon {
+				width: 30px;
+				height: 30px;
+				padding-right: 10px;
+				vertical-align: middle;
+			}
+			
+			.dsclink {
+				border: 2px solid #7289da;
+				border-radius: 20px;
+				color: #ffffff;
+				font-size: 25px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #7289da;
+				float: right;
+				margin-right:1px;
+				width: 14.6em;
+				height: inherit;
+				margin-bottom: 5px;
+			}
+			.dsclink:hover {
+				color: #ffffff;
+				background-color: #93a3d8;
+				cursor: text;
+			}
+			.dscicon {
+				width: 30px;
+				height: 30px;
+				padding-right: 10px;
+				vertical-align: middle;
+			}
+			
+			.gitlink {
+				border: 2px solid #000000;
+				border-radius: 20px;
+				color: #ffffff;
+				font-size: 25px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #000000;
+				float: left;
+				width: 29.55em;
+				height: inherit;
+				margin-bottom: 5px;
+			}
+			.gitlink:hover {
+				color: #ffffff;
+				background-color: #333333;
+			}
+			.giticon {
+				width: 30px;
+				height: 30px;
+				padding-right: 10px;
+				vertical-align: middle;
+			}
+			
+			.hidden-text {
+				color: #00000000;
+				text-align:center;
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			.hidden-text:hover {
+				color: #000000ff;
+			}
+			
+			.patchy {
+				float: left;
+				position: relative;
+				bottom: 100px;
+				right: 80px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="header"></div>
 		<div class="main">
-			<div>
+			<div class="innermain">
 				<h1>firubii's neato site of stuff</h1>
-				<p>Hi!! I'm <b><i>firubii</i></b>! I'm a cool transgender girl who plays video games and loves to mod them, especially Kirby and Touhou!<br>
+				<p style="margin-bottom:30px;">Hi!! I'm <b><i>firubii</i></b>! I'm a cool transgender girl who plays video games and loves to mod them, especially Kirby and Touhou!<br>
 				This site is pretty barren right now, HTML/CSS/whatever and stuff isn't my specialty, but feel free to look around if you want. Maybe I'll fix it up some day instead of occasionally slightly tweaking it as my interests change and my general skills improve.<br>
 				My programming related projects and stuff are usually about modding Kirby games, and written in C#.<br>
-				Links to my social medias and other pages around this site can be found just below.</p>
+				Links to my socials and other pages around this site can be found just below.</p>
 				<div>
-					<p><a href="about/" style="font-size:25px;"><b>About Me</b></a></p>
+					<a class="linkbox" href="about/">
+						<b>About Me</b>
+					</a>
 				</div>
 				<div>
-					<p><a href="projects/" style="font-size:25px;"><b>Projects</b></a></p>
+					<a class="linkbox" href="projects/">
+						<b>Projects</b>
+					</a>
 				</div>
 				<div>
-					<p><a href="stuff/" style="font-size:25px;"><b>Random things on this site</b></a></p>
+					<a class="linkbox" href="stuff/" style="margin-bottom:30px;">
+						<b>Random things on this site</b>
+					</a>
 				</div>
 				<div>
-					<p style="font-size:20px;"><b>Random social links and stuffs:</b></p>
-					<a href="https://twitter.com/firubiii"><img src="img/twitter.png" style="width:45px;height:45px;padding-bottom:5px;padding-right:5px;" align="middle"><b>Twitter -- @firubiii</b></a><br>
-					<a href="https://www.youtube.com/channel/UCMSC9CDb4rGI0f1xYWeS1SA"><img src="img/youtube.png" style="width:4.5%;height:4.5%;padding-left:5px;padding-bottom:5px;" align="middle"><b style="padding-left:10px;padding-top=2px;">YouTube</b></a><br>
-					<a href="https://github.com/firubii"><img src="img/github.png" style="width:35px;height:35px;padding-left:5px;" align="middle"><b style="padding-left:10px;padding-top:5px;">Github</b></a><br>
-					<img src="img/discord.png" style="width:5%;height:5%;padding-right:5px;padding-top:5px;padding-right:7px;padding-left:5px;" align="middle"><b>firubii#2823</b><br>
+					<a class="twtlink" href="https://twitter.com/firubiii">
+						<img class="twticon" src="img/twitter.png"><b>@firubiii</b>
+					</a>
+					<div class="dsclink">
+						<img class="dscicon" src="img/discord.png"><b>firubii#2823</b>
+					</div>
+					<a class="gitlink" href="https://github.com/firubii">
+						<img class="giticon" src="img/github.png"><b>firubii</b>
+					</a>
+					<br><br><br><br><br><br><br><br><br><br>
+					<p class="hidden-text">if you found this text dm me on twitter ;)</p>
 				</div>
 			</div>
+			<img src="img/patchy.png" class="patchy">
 		</div>
 	</body>
 </html>

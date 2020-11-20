@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>firubii's place - kirby</title>
+		<title>firubii's place - hel research</title>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<style>
 			body {
 				font-family: 'PT Sans', sans-serif;
 				margin: 0px;
+				background: url("../../../img/galaxy.jpg") no-repeat;
+				background-position: center;
+				background-attachment: fixed;
 			}
 			h1 {
 				font-weight: bold;
 				font-size: 50px;
-			}
-			.header
-			{
-				width: flex;
-				height: 65px;
-				background: -webkit-linear-gradient(top, rgba(0,255,255,1) 1%,rgba(122,0,255,1) 100%);
+				margin-top: 0px;
 			}
 			.main {
 				width: 774px;
-				margin: 200px auto;
-				margin-top: 10px;
+				margin: 100px auto;
+				margin-top: 100px;
+				margin-bottom: 0px;
+				border: 6px solid #6c428c;
+				border-radius: 20px;
+				background: linear-gradient(0deg, rgba(166,160,254,0.8) 0%, rgba(227,173,255,0.8) 100%);
+				background-color: #ffffffaa;
 			}
+			.innermain {
+				padding: 15px;
+			}
+			
 			table {
-			  border-collapse: collapse;
-			  width: 70%;
+				border-collapse: collapse;
+				width: 70%;
 			}
 			td, th {
-			  border: 1px solid #999999;
-			  text-align: center;
-			  padding: 8px;
+				border: 1px solid #999999;
+				text-align: center;
+				padding: 8px;
+				background-color: #eeeeee;
 			}
 			th {
-			  background-color: #dddddd;
+				background-color: #dddddd;
+			}
+			.green {
+				background-color:#bbffbb;
+			}
+			
+			.patchy {
+				float: right;
+				position: relative;
+				bottom: 90px;
+				left: 40px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="header"></div>
 		<div class="main">
-			<div>
+			<img src="../patchy.png" class="patchy">
+			<div class="innermain">
 				<h1>Kirby/HEL Engine Research</h1>
 				<div>
 					<p><b>Note:</b> WIP documentation, will finish this out later with the other file formats</p>
@@ -61,7 +79,7 @@
 						<tr><td>0x6</td><td>uint16</td><td>Byte order mark (BOM)<br>0x1234 for Big Endian<br>0x3412 for Little Endian</td></tr>
 						<tr><td>0x8</td><td>uint32</td><td>Offset to end of file data</td></tr>
 						<tr><td>0xC</td><td>uint32</td><td>Unknown, always 65001</td></tr>
-						<tr style="background-color:#bbffbb;"><td>0x10</td><td>uint32</td><td>[Version 4.0 only]<br>Offset to XBIN RLOC footer</td></tr>
+						<tr><td class="green">0x10</td><td class="green">uint32</td><td class="green">[Version 4.0 only]<br>Offset to XBIN RLOC footer</td></tr>
 					</table>
 					</p>
 					<b style="font-size:25px;">XBIN Footer</b>
@@ -112,8 +130,8 @@
 						<tr><td>0x4</td><td>uint32[n]</td><td>List of offsets to each string</td></tr>
 					</table>
 					</p>
-					<b style="font-size:35px;">MINT Archive</b>
-					<p style="font-size:25px;">Please see <b><a href="https://docs.google.com/spreadsheets/d/1IrP3CzQjVB6G0CvMhafsXdosaCSYivbSrIsuvZIhVgo/edit?usp=sharing">this Google Spreadsheet</a></b> for info on MINT archives and scripts.</p>
+					<b style="font-size:35px;">Mint Archive</b>
+					<p style="font-size:25px;">Please see <b><a href="https://docs.google.com/spreadsheets/d/1IrP3CzQjVB6G0CvMhafsXdosaCSYivbSrIsuvZIhVgo/edit?usp=sharing">this Google Spreadsheet</a></b> for info on Mint archives and scripts.</p>
 					<b style="font-size:35px;">YAML</b>
 					<p>YAML files are a byte version of the text format Yaml, and are fairly simple.</p>
 					<b style="font-size:25px;">YAML Header</b>
@@ -127,6 +145,7 @@
 					<b style="font-size:25px;">YAML Data Types</b>
 					<table>
 						<tr><th>Identifier</th><th>Type</th>
+						<tr><td>0</td><td>Invalid</td></tr>
 						<tr><td>1</td><td>32-bit Integer</td></tr>
 						<tr><td>2</td><td>Float</td></tr>
 						<tr><td>3</td><td>Boolean</td></tr>

@@ -7,50 +7,86 @@
 			body {
 				font-family: 'PT Sans', sans-serif;
 				margin: 0px;
+				background: url("../img/galaxy.jpg") no-repeat;
+				background-position: center;
+				background-attachment: fixed;
 			}
 			h1 {
 				font-weight: bold;
 				font-size: 50px;
-			}
-			.header
-			{
-				width: flex;
-				height: 65px;
-				background: -webkit-linear-gradient(top, rgba(0,255,255,1) 1%,rgba(122,0,255,1) 100%);
+				margin-top: 0px;
 			}
 			.main {
 				width: 774px;
-				margin: 200px auto;
-				margin-top: 10px;
+				margin: 100px auto;
+				margin-top: 100px;
+				margin-bottom: 0px;
+				border: 6px solid #6c428c;
+				border-radius: 20px;
+				background: linear-gradient(0deg, rgba(166,160,254,0.8) 0%, rgba(227,173,255,0.8) 100%);
+				background-color: #ffffffaa;
+			}
+			.innermain {
+				padding: 15px;
+			}
+			
+			.linkbox {
+				border: 2px solid #7842ff;
+				border-radius: 20px;
+				color: #420bcd;
+				font-size: 25px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #b400ff33;
+				float: left;
+				width: 29.55em;
+				height: inherit;
+				margin-bottom: 5px;
+			}
+			.linkbox:hover {
+				background-color: #e6adff33;
+				border-color: #4300ff;
+			}
+			
+			.dscicon {
+				width: 30px;
+				height: 30px;
+				padding-right: 10px;
+				vertical-align: middle;
+			}
+			
+			.patchy {
+				float: right;
+				position: relative;
+				bottom: 90px;
+				left: 40px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="header"></div>
 		<div class="main">
-			<div>
+			<img src="patchy.png" class="patchy">
+			<div class="innermain">
 				<h1>Random Stuff</h1>
 				<p>Just some random stuff here</p>
 				<div>
-					<p><a href="research/" style="font-size:25px;"><b>Various Game Research Notes</b></a></p>
+					<a class="linkbox" href="research/"><b>Various Game Research Notes</b></a>
 				</div>
 				<div>
-					<p><a href="https://discord.gg/bWTDt6H" style="font-size:25px;"><img src="../img/discord.png" style="width:5%;height:5%;padding-right:5px;padding-top:5px;padding-right:7px;padding-left:5px;" align="middle"/><b>Kirby Star Allies Modding Server</b></a> A Discord server I run centered around modding Kirby: Star Allies</p>
+					<a class="linkbox" href="https://discord.gg/bWTDt6H"><img class="dscicon" src="../img/discord.png"/><b>Kirby Star Allies Modding Server</b></a><br>
+					<p>A Discord server I run centered around modding Kirby: Star Allies</p>
 				</div>
 				<div>
-					<p><a href="tierlist/" style="font-size:25px;"><b>Various Tier List Makers</b></a> (originally for Smash by <a href="https://github.com/quetzle/smash-apps/tree/gh-pages/newtier">quetzle</a>, modified by me)</p>
+					<a class="linkbox" href="tierlist/"><b>Various Tier List Makers</b></a><br>
+					<p>(originally for Smash by <a href="https://github.com/quetzle/smash-apps/tree/gh-pages/newtier">quetzle</a>, modified by me)</p>
 				</div>
 				<div>
-					<p><a href="https://drive.google.com/open?id=1B2y1Lm9iUpTKg6c7kNtxubY_SWGd1_7x" style="font-size:25px;"><b>Touhou Cannonball Asset Rips</b></a> A collection of art and music from the Touhou Cannonball mobile game</p>
+					<a class="linkbox" href="https://drive.google.com/open?id=1B2y1Lm9iUpTKg6c7kNtxubY_SWGd1_7x" style="font-size:25px;"><b>Touhou Cannonball Asset Rips</b></a></p><br>
+					<p>A collection of practically every asset from the now-defunct Touhou Cannonball mobile game</p>
 				</div>
 				<div>
-					<p><a href="https://mega.nz/#F!cHIiXQCI!Pbdlbtj5oWZTC86jZ39Dtw" style="font-size:25px;"><b>Kirby Music Rips</b></a> A collection of music rips from almost every Kirby game, all in WAV</p>
-				</div>
-				<div>
-					<p><a href="https://mega.nz/#F!ZD5kgISB!s2SFyXVHMyqOLD3jMYuRxg" style="font-size:25px;"><b>Game Rip Collection</b></a> A collection of a bunch of assets from a couple of games (I rarely update this)</p>
-				</div>
-				<div>
-					<a href="../" style="font-size:20px;"><b>Back to Index</b></a>
+					<a class="linkbox" href="https://mega.nz/#F!cHIiXQCI!Pbdlbtj5oWZTC86jZ39Dtw" style="font-size:25px;"><b>Kirby Music Rips</b></a><br>
+					<p>A collection of music rips from almost every Kirby game, all in WAV</p>
 				</div>
 			</div>
 		</div>

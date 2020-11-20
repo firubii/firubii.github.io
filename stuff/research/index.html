@@ -7,36 +7,68 @@
 			body {
 				font-family: 'PT Sans', sans-serif;
 				margin: 0px;
+				background: url("../../img/galaxy.jpg") no-repeat;
+				background-position: center;
+				background-attachment: fixed;
 			}
 			h1 {
 				font-weight: bold;
 				font-size: 50px;
-			}
-			.header
-			{
-				width: flex;
-				height: 65px;
-				background: -webkit-linear-gradient(top, rgba(0,255,255,1) 1%,rgba(122,0,255,1) 100%);
+				margin-top: 0px;
 			}
 			.main {
 				width: 774px;
-				margin: 200px auto;
-				margin-top: 10px;
+				margin: 100px auto;
+				margin-top: 100px;
+				margin-bottom: 0px;
+				border: 6px solid #6c428c;
+				border-radius: 20px;
+				background: linear-gradient(0deg, rgba(166,160,254,0.8) 0%, rgba(227,173,255,0.8) 100%);
+				background-color: #ffffffaa;
+			}
+			.innermain {
+				padding: 15px;
+			}
+			
+			.linkbox {
+				border: 2px solid #7842ff;
+				border-radius: 20px;
+				color: #420bcd;
+				font-size: 25px;
+				text-align: center;
+				text-decoration: none;
+				background-color: #b400ff33;
+				float: left;
+				width: 29.55em;
+				height: inherit;
+				margin-bottom: 5px;
+			}
+			.linkbox:hover {
+				background-color: #e6adff33;
+				border-color: #4300ff;
+			}
+			
+			.patchy {
+				float: right;
+				position: relative;
+				bottom: 90px;
+				left: 40px;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="header"></div>
 		<div class="main">
-			<div>
+			<img src="patchy.png" class="patchy">
+			<div class="innermain">
 				<h1>Research</h1>
 				<p>Here's some research of mine of various games</p>
 				<div>
-					<p><a href="kirby/" style="font-size:25px;"><b>Kirby/HEL Engine</b></a></p>
+					<a class="linkbox" href="kirby/"><b>Kirby/HEL Engine</b></a>
 				</div>
 				<div>
-					<p><a href="smb35/" style="font-size:25px;"><b>Super Mario Bros. 35</b></a></p>
+					<a class="linkbox" href="smb35/"><b>Super Mario Bros. 35</b></a>
 				</div>
+				<br><br><br><br>
 			</div>
 		</div>
 	</body>
