@@ -3,6 +3,7 @@
 	<head>
 		<title>firubii's place - projects</title>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
 			body {
 				font-family: 'PT Sans', sans-serif;
@@ -10,6 +11,7 @@
 				background: url("../img/galaxy.jpg") no-repeat;
 				background-position: center;
 				background-attachment: fixed;
+				background-size: auto;
 			}
 			h1 {
 				font-weight: bold;
@@ -60,6 +62,16 @@
 				position: relative;
 				bottom: 100px;
 				left: 50px;
+			}
+			
+			@media screen and (max-width:700px) {
+				body {
+					font-size: 10vw;
+					background-size: 1000vw;
+				}
+				.patchy {
+					left: 0px;
+				}
 			}
 		</style>
 	</head>

@@ -3,6 +3,7 @@
 	<head>
 		<title>firubii's place - smb35 research</title>
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
 			body {
 				font-family: 'PT Sans', sans-serif;
@@ -50,6 +51,29 @@
 				bottom: 90px;
 				left: 40px;
 			}
+			
+			.filetype {
+				font-size: 35px;
+			}
+			.section {
+				font-size: 25px;
+			}
+			
+			@media screen and (max-width:700px) {
+				body {
+					font-size: 10vw;
+					background-size: 1000vw;
+				}
+				.filetype {
+					font-size: 15vw;
+				}
+				.section {
+					font-size: 12vw;
+				}
+				.patchy {
+					left: 0px;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -58,9 +82,9 @@
 			<div class="innermain">
 				<h1>Super Mario Bros. 35 Research</h1>
 				<div>
-					<b style="font-size:25px;">Level Data</b>
+					<b class="section">Level Data</b>
 					<p>The "_stage.xml_" file for each stage lists various properties of the stages, and next to it in the archive is XML files for each area and their corresponding .dat file. The tilemap is just raw tilemap data, where each tile takes up 2 bytes of data. The first byte is the tile's internal ID, and the second is flags for it to use.</p>
-					<b style="font-size:25px;">Tile List</b>
+					<b class="section">Tile List</b>
 					<table>
 						<tr><th>Tile ID</th><th>Description</th></tr>
 						<tr><td>0x00</td><td>Air</td></tr>
@@ -145,7 +169,7 @@
 						<tr><td>0x4F</td><td>Nothing</td></tr>
 					</table>
 					</p>
-					<b style="font-size:25px;">Tile Flags</b>
+					<b class="section">Tile Flags</b>
 					<table>
 						<tr><th>Flag</th><th>Description</th></tr>
 						<tr><td>0x01</td><td>Flip Sprite</td></tr>
