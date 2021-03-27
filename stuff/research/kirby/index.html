@@ -93,34 +93,34 @@
 						<li>Map2D</li>
 						<li>Param (RtDL)</li>
 					</p>
-					<b class="filetype">XBIN Wrapper</b>
-					<p>Almost every non-asset file in HAL's HEL Engine has an "XBIN" header/wrapper in the file. Its purpose is unknown, but it's used in all of them.</p>
-					<b class="section">XBIN Header</b>
+					<b class="filetype">XData Wrapper</b>
+					<p>Almost every non-asset file in HAL's HEL Engine has an XData header/wrapper in the file. Its purpose is to provide file metadata, and it's used in almost all of the HEL specific file types.</p>
+					<b class="section">XData Header</b>
 					<table>
 						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
 						<tr><td>0x0</td><td>char[4]</td><td>Magic, always "XBIN"</td></tr>
-						<tr><td>0x4</td><td>byte[2]</td><td>XBIN version, formatted as [0].[1]</td></tr>
+						<tr><td>0x4</td><td>byte[2]</td><td>XData version, formatted as [0].[1]</td></tr>
 						<tr><td>0x6</td><td>uint16</td><td>Byte order mark (BOM)<br>0x1234 for Big Endian<br>0x3412 for Little Endian</td></tr>
 						<tr><td>0x8</td><td>uint32</td><td>Offset to end of file data</td></tr>
 						<tr><td>0xC</td><td>uint32</td><td>Unknown, always 65001</td></tr>
-						<tr><td class="green">0x10</td><td class="green">uint32</td><td class="green">[Version 4.0 only]<br>Offset to XBIN RLOC footer</td></tr>
+						<tr><td class="green">0x10</td><td class="green">uint32</td><td class="green">[Version 4.0 only]<br>Offset to XData RLOC footer</td></tr>
 					</table>
 					</p>
-					<b class="section">XBIN Footer</b>
-					<p>Only present in XBIN version 4.0.</p>
+					<b class="section">XData Footer</b>
+					<p>Only present in XData version 4.0.</p>
 					<table>
 						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
 						<tr><td>0x0</td><td>char[4]</td><td>Always "RLOC"</td></tr>
 						<tr><td>0x4</td><td>byte[8]</td><td>Padding, always zeros</td></tr>
 					</table>
 					</p>
-					<b class="filetype">FDGH</b>
-					<p>FDGH files are used to denote game scenes and what files need to be preloaded into memory for each scene. These range from level rooms to main menus.</p>
-					<b class="section">FDGH Header</b>
+					<b class="filetype">FDG</b>
+					<p>FDG files are used to denote game scenes and what files need to be preloaded into memory for each scene. These range from level rooms to main menus.</p>
+					<b class="section">FDG Header</b>
 					<table>
 						<tr><th>Offset</th><th>Type</th><th>Description</th></tr>
 						<tr><td>0x0</td><td>char[4]</td><td>Magic/BOM<br>"FDGH" if Big Endian<br>"HGDF" if Little Endian</td></tr>
-						<tr><td>0x4</td><td>char[4]</td><td>FDGH version, formatted as [0].[1].[2].[3]</td></tr>
+						<tr><td>0x4</td><td>byte[4]</td><td>FDGH version, formatted as [0].[1].[2].[3]</td></tr>
 						<tr><td>0x8</td><td>uint32</td><td>Offset to file list</td></tr>
 						<tr><td>0xC</td><td>uint32</td><td>Offset to scene list</td></tr>
 						<tr><td>0x10</td><td>uint32</td><td>Offset to string list</td></tr>
@@ -156,6 +156,7 @@
 					</p>
 					<b class="filetype">Mint Archive</b>
 					<p class="section">Please see <b><a href="https://docs.google.com/spreadsheets/d/1IrP3CzQjVB6G0CvMhafsXdosaCSYivbSrIsuvZIhVgo/edit?usp=sharing">this Google Spreadsheet</a></b> for info on Mint archives and scripts.</p>
+					<p class="section">Please see <b><a href="https://docs.google.com/spreadsheets/d/1A_08ytw1oIBhqBzpkxDIU86RwmYAjG4DopogqCQllMo/edit?usp=sharing">this Google Spreadsheet</a></b> for info on the Mint bytecode's uses and instruction sets.</p>
 					<b class="filetype">YAML</b>
 					<p>YAML files are a byte version of the text format Yaml, and are fairly simple.</p>
 					<b class="section">YAML Header</b>
