@@ -32,6 +32,19 @@
 				padding: 15px;
 			}
 			
+			.infoarea {
+				background-color: #f2d4ff94;
+				border: 1px solid #6c51ff;
+				border-radius: 20px;
+				padding-right: 5px;
+				padding-left: 5px;
+				margin-bottom: 10px;
+			}
+			.infodesc {
+				margin-left: 2px;
+				margin-right: 2px;
+			}
+			
 			.linkbox {
 				border: 2px solid #7842ff;
 				border-radius: 20px;
@@ -41,7 +54,7 @@
 				text-decoration: none;
 				background-color: #b400ff33;
 				float: left;
-				width: 29.55em;
+				width: 29em;
 				height: inherit;
 				margin-bottom: 5px;
 			}
@@ -83,84 +96,89 @@
 				<div>
 					<p style="margin-bottom:5px;font-size:30px;"><b>Kirby Projects and Tools</b></a></p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/MintWorkshop" style="font-size:25px;"><b>MintWorkshop</b></a>
-					<desc>MintWorkshop is a GUI based tool for editing HAL's Mint bytecode found in modern Kirby games and the BoxBoy series.
-					<br>Unlike KirbyMINT, this one actually works and the archives it builds run ingame.</desc>
+					<p class="infodesc" >MintWorkshop is a GUI based tool for editing HAL's Mint bytecode found in modern Kirby games and the BoxBoy series.
+					<br>Unlike KirbyMINT, this one actually works and the archives it builds run ingame.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/KirbyYAML" style="font-size:25px;"><b>KirbyYAML</b></a>
-					<desc>KirbyYAML is a GUI based tool for viewing and editing YAML binary files found in HEL Engine games using HAL's more recent version.</desc>
+					<p class="infodesc" >KirbyYAML is a GUI based tool for viewing and editing YAML binary files found in HEL Engine games using HAL's more recent version.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/JamBuilder" style="font-size:25px;"><b>JamBuilder</b></a>
-					<desc>JamBuilder is a GUI level editor tool for viewing and editing level data in Kirby: Star Allies.</desc>
+					<p class="infodesc" >JamBuilder is a GUI level editor tool for viewing and editing level data in Kirby: Star Allies.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/CndXML" style="font-size:25px;"><b>CndXML</b></a>
-					<desc>CndXML is a program for converting HAL's CND binaries to XML and back.
-					<br>Written with much better and more generally useable code than KirbyCND, so if you need to read the CND format for any reason, this code is free to use.</desc>
+					<p class="infodesc" >CndXML is a program for converting HAL's CND binaries to XML and back.
+					<br>Written with much better and more generally useable code than KirbyCND, so if you need to read the CND format for any reason, this code is free to use.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/KirbyFDGH" style="font-size:25px;"><b>KirbyFDGH</b></a>
-					<desc>KirbyFDGH is a GUI based tool for viewing and editing FDG scene preload files found in HEL Engine games.</desc>
+					<p class="infodesc" >KirbyFDGH is a GUI based tool for viewing and editing FDG scene preload files found in HEL Engine games.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
+					<a class="linkbox" href="https://github.com/firubii/HaltmannLab" style="font-size:25px;"><b>HaltmannLab</b></a>
+					<p class="infodesc" >HaltmannLab is a GUI level editor tool for viewing and editing level data in Kirby: Planet Robobot.</p>
+				</div>
+				<div class="infoarea">
+					<a class="linkbox" href="https://github.com/firubii/MagoBox" style="font-size:25px;"><b>MagoBox</b></a>
+					<p class="infodesc" >MagoBox is a GUI level editor tool for viewing and editing level data in Kirby's Return to Dream Land.</p>
+				</div>
+				<div class="infoarea">
+					<a class="linkbox" href="https://github.com/firubii/RDLParamGUI" style="font-size:25px;"><b>RDLParamGUI</b></a>
+					<p class="infodesc" >RDLParamGUI is a GUI based tool for viewing and editing param archive files found in HEL Engine games using HAL's more earlier versions.<br>Despite the name, it also works with Kirby Triple Deluxe and Kirby Planet Robobot.</p>
+				</div>
+				<div class="infoarea">
+					<a class="linkbox" href="https://github.com/firubii/StarAlliesRandomizer" style="font-size:25px;"><b>Kirby Star Allies Randomizer</b></a>
+					<p class="infodesc" >Kirby Star Allies Randomizer is a GUI based tool that can randomize various things in Kirby Star Allies, including enemy Copy Abilities, attack strength, attack elements, and some miscellaneous features by patching the game's main Mint binary with custom code.</p>
+				</div>
+				<div class="infoarea">
+					<a class="linkbox" href="https://github.com/firubii/kss-randomizer" style="font-size:25px;"><b>Kirby Super Star Randomizer</b></a>
+					<p class="infodesc" >Kirby Super Star Randomizer is a GUI based tool that can randomize various things in Kirby Super Star ROMs, including enemy Copy Abilities, attack strength, and attack elements.<br>I made this with research help from <a href="https://twitter.com/reserved_kirby">Reserved</a>.<br> The code behind it is really old.</p>
+				</div>
+				<br><br>
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/KirbyCND" style="font-size:25px;"><b>KirbyCND</b></a>
-					<desc>KirbyCND is a GUI based tool for viewing CND binary files found in HEL Engine games using HAL's most recent version.</desc>
+					<p class="infodesc" >KirbyCND is a GUI based tool for viewing CND binary files found in HEL Engine games using HAL's most recent version.</p>
 					<p><b>Note:</b> I've stopped working on this specific tool in favor of CndXML.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/KirbyMINT" style="font-size:25px;"><b>KirbyMINT</b></a>
-					<desc>KirbyMINT is a CLI based tool that allows for disassembly and assembly of Mint archives and scripts found in HEL Engine games.</desc>
+					<p class="infodesc" >KirbyMINT is a CLI based tool that allows for disassembly and assembly of Mint archives and scripts found in HEL Engine games.</p>
 					<p><b>Note:</b> I've stopped working on this specific tool in favor of MintWorkshop.</p>
 				</div>
-				<div style="padding-bottom:20px;">
-					<a class="linkbox" href="https://github.com/firubii/HaltmannLab" style="font-size:25px;"><b>HaltmannLab</b></a>
-					<desc>HaltmannLab is a GUI level editor tool for viewing and editing level data in Kirby: Planet Robobot.</desc>
-				</div>
-				<div style="padding-bottom:20px;">
-					<a class="linkbox" href="https://github.com/firubii/MagoBox" style="font-size:25px;"><b>MagoBox</b></a>
-					<desc>MagoBox is a GUI level editor tool for viewing and editing level data in Kirby's Return to Dream Land.</desc>
-				</div>
-				<div style="padding-bottom:20px;">
-					<a class="linkbox" href="https://github.com/firubii/RDLParamGUI" style="font-size:25px;"><b>RDLParamGUI</b></a>
-					<desc>RDLParamGUI is a GUI based tool for viewing and editing param archive files found in HEL Engine games using HAL's more earlier versions.<br>Despite the name, it also works with Kirby Triple Deluxe and Kirby Planet Robobot.</desc>
-				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/RDLMINT" style="font-size:25px;"><b>RDLMINT</b></a>
-					<desc>RDLMINT is a CLI based tool for disassembling and assembling Mint archives and scripts using Mint version 0.2.</desc>
+					<p class="infodesc" >RDLMINT is a CLI based tool for disassembling and assembling Mint archives and scripts using Mint version 0.2.</p>
 					<p><b>Note:</b> I've stopped working on this specific tool in favor of MintWorkshop.</p>
-				</div>
-				<div style="padding-bottom:20px;">
-					<a class="linkbox" href="https://github.com/firubii/kss-randomizer" style="font-size:25px;"><b>Kirby Super Star Randomizer</b></a>
-					<desc>Kirby Super Star Randomizer is a GUI based tool that can randomize various things in Kirby Super Star ROMs, including enemy Copy Abilities, attack strength, and attack elements.<br>I made this with research help from <a href="https://twitter.com/reserved_kirby">Reserved</a>.</desc>
 				</div>
 				<div>
 					<p style="margin-bottom:5px;font-size:30px;"><b>Touhou Projects and Tools</b> <b class="hidden-text" style="font-weight:normal;font-size:15px;vertical-align:middle;">haha "touhou project"</b></a></p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/ThPatchConfig" style="font-size:25px;"><b>ThPatchConfig</b></a>
-					<desc>ThPatchConfig is a GUI tool for configurating thcrap and launching patches. Made because I disliked how clunky thcrap's actual configuration console tool was.</desc>
+					<p class="infodesc" >ThPatchConfig is a GUI tool for configurating thcrap and launching patches. Made because I disliked how clunky thcrap's actual configuration console tool was.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/ThRandomizer" style="font-size:25px;"><b>ThRandomizer</b></a>
-					<desc>ThRandomizer is a very WIP randomizer for Touhou games. Currently only randomizes a very limited amount of instructions in ECL files.<br>I have no idea if I'll ever finish this.</desc>
+					<p class="infodesc" >ThRandomizer is a very WIP randomizer for Touhou games. Currently only randomizes a very limited amount of instructions in ECL files.<br>I have no idea if I'll ever finish this.</p>
 				</div>
 				<div>
 					<p style="margin-bottom:5px;font-size:30px;"><b>Other Projects and Tools</b></a></p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/HIXTool" style="font-size:25px;"><b>HIXTool</b></a>
-					<desc>HIXTool is a command-line tool for dumping and rebuilding HIX archives that Nintendo uses for texture replacement in the versions of Super Mario Sunshine and Super Mario Galaxy in Super Mario 3D All Stars.</desc>
+					<p class="infodesc" >HIXTool is a command-line tool for dumping and rebuilding HIX archives that Nintendo uses for texture replacement in the versions of Super Mario Sunshine and Super Mario Galaxy in Super Mario 3D All Stars.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/GM2Explorer" style="font-size:25px;"><b>GM2Explorer</b></a>
-					<desc>GM2Explorer is a GUI based tool that can read data.win files from games created in Game Maker Studio 1 & 2 and allows for extraction of spritesheets, audio, and sprites. Of course, there are better tools for this kind of stuff now, like UndertaleModTool, but it exists.</desc>
+					<p class="infodesc" >GM2Explorer is a GUI based tool that can read data.win files from games created in Game Maker Studio 1 & 2 and allows for extraction of spritesheets, audio, and sprites. Of course, there are better tools for this kind of stuff now, like <a href="https://github.com/krzys-h/UndertaleModTool" >UndertaleModTool</a>, but it exists.</p>
 				</div>
-				<div style="padding-bottom:20px;">
+				<div class="infoarea">
 					<a class="linkbox" href="https://github.com/firubii/Sm4sh-CSS-Colorizer" style="font-size:25px;"><b>Sm4sh CSS Colorizer</b></a>
-					<desc>Sm4sh CSS Colorizer is an extremely old and very buggy GUI based tool for recoloring the Character Select Screen background flames in Super Smash Bros. for Wii U.</desc>
+					<p class="infodesc" >Sm4sh CSS Colorizer is an extremely old and very buggy GUI based tool for recoloring the Character Select Screen background flames in Super Smash Bros. for Wii U.</p>
 				</div>
 			</div>
 		</div>
