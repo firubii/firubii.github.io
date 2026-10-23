@@ -183,6 +183,20 @@
 				right: 80px;
 			}
 			
+			.game-boxart {
+				width: 200px;
+				border-radius: 20px;
+			}
+			.game-text {
+				text-align: center;
+				margin: 1px;
+			}
+			.game-textlink {
+				text-decoration: none;
+				text-align: center;
+				font-weight: bold;
+			}
+			
 			@media screen and (max-width:700px) {
 				body {
 					font-size: 10vw;
@@ -196,7 +210,7 @@
 	<body>
 		<div class="main">
 			<div class="innermain">
-				<h1>firubii's neato site of stuff</h1>
+				<h1>firubii's awesome site of stuff</h1>
 				<p style="margin-bottom:30px;">Hi!! I'm <b><i>firubii</i></b>! I'm a cool transgender girl who plays video games and loves to mod them.<br>
 				This site doesn't have much on it right now, HTML/CSS/whatever and stuff isn't my specialty, but feel free to look around if you want. Maybe I'll make it a lot cooler some day instead of occasionally slightly tweaking it as my interests change and my general skills improve.<br>
 				My programming related projects and stuff are usually about modding Kirby games, and written in C#.<br>
@@ -233,7 +247,22 @@
 						<img class="giticon" src="img/github.png"><b>firubii</b>
 					</a>
 				</div>
-				<p class="hidden-text">if you found this text dm me on twitter or tumblr :3</p>
+				<div style="align-content: center;display: flex;justify-content: center;height: 70px;margin-top: 20px;">
+					<h1>Games I've Worked on</h1>
+				</div>
+				<div style="align-items: center; display: flex; align-content: center; flex-wrap: wrap; flex-direction: row; width: 100%; height: fit-content; justify-content: center;">
+					<div style="align-content: center;justify-content: center;display: flex;flex-direction: column;">
+						<a href="https://store.steampowered.com/app/2759280/Kumitantei_OldSchool_Slaughter/" style="margin: 0 auto;">
+							<img class="game-boxart" src="img/games/kumitantei.jpg">
+						</a>
+						<p class="game-text">
+							<a class="game-textlink" href="https://store.steampowered.com/app/2759280/Kumitantei_OldSchool_Slaughter/">
+								Kumitantei: Old-School Slaughter
+							</a>
+						</p>
+						<p class="game-text">Technical Director / Lead Programmer</p>
+					</div>
+				</div>
 			</div>
 			<img src="img/patchy.png" class="patchy">
 		</div>
